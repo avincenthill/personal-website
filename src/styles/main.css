@@ -1,0 +1,15 @@
+/* css variables */
+:root {
+  /*    darker color*/
+  --color1: #000000;
+  /*    lighter color*/
+  --color2: red;
+  /*    lightest color, usually white*/
+  --color3: #ffffff;
+}
+
+/* styling */
+body {
+  background-color: var(--color3);
+  text-align: center;
+}

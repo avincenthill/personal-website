@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import Nav from "./Nav";
 import "../styles/main.css";
 
-class App extends Component {
+class Nav extends Component {
   render() {
     return (
       <React.Fragment>
-        <Nav handleRoute={this.handleRoute} />
-        <div>Test</div>
+        <div>Nav</div>
       </React.Fragment>
     );
   }
 }
 
-export default App;
+export default Nav;
