@@ -1,15 +1,44 @@
-/* css variables */
+/* -----------css variables----------- */
 :root {
   /*    darker color*/
   --color1: #000000;
-  /*    lighter color*/
-  --color2: red;
-  /*    lightest color, usually white*/
+  --color2: darkgray;
   --color3: #ffffff;
+  --color4: grey;
 }
 
-/* styling */
+/* -----------all styling----------- */
+
+/* body styling */
 body {
   background-color: var(--color3);
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vh;
+}
+
+/* nav styling */
+nav ul {
+  /* flexbox container */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+nav li {
+  /* flexbox items */
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  transition: all 0.2s;
+  color: var(--color1);
 }
