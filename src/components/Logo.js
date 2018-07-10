@@ -6,7 +6,12 @@ class Logo extends Component {
     return (
       <React.Fragment>
         <div>
-          <a href="./">Logo</a>
+          <a href="./">
+            <img
+              src={require("/public/AVH-Design-Logo.png")}
+              alt="AVH Design"
+            />
+          </a>
         </div>
       </React.Fragment>
     );
