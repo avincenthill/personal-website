@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import "../styles/main.css";
 //import $ from 'jquery'
 //import _ from 'underscore'
 import Nav from "./Nav";
 import Footer from "./Footer";
-import "../styles/main.css";
 
 class App extends Component {
   render() {
@@ -37,7 +37,7 @@ class App extends Component {
           dignissimos.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+          Loregpomm ipsum dolor sit amet, consectetur adipisicing elit. Tempore
           tempora rerum, est autem cupiditate, corporis a qui libero ipsum
           delectus quidem dolor at nulla, adipisci veniam in reiciendis aut
           asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in

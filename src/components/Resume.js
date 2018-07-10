@@ -1,14 +1,16 @@
+//a Resume react component
 import React, { Component } from "react";
 import "../styles/main.css";
 
-class Project extends Component {
+class Resume extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="project">Project</div>
+        <div>Resume</div>
       </React.Fragment>
     );
   }
 }
 
-export default Project;
+export default Resume;
+//import Resume from "./Resume";

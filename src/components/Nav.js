@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/main.css";
+import Logo from "./Logo";
 
 class Nav extends Component {
   render() {
@@ -8,22 +9,19 @@ class Nav extends Component {
         <nav>
           <ul id="nav">
             <li class="logo">
-              <a href="https://www.example.com">LOST.</a>
+              <Logo />
             </li>
             <li>
-              <a href="https://www.example.com">Home</a>
+              <a href="./about">About</a>
             </li>
             <li>
-              <a href="https://www.example.com">About</a>
+              <a href="./projects">Projects</a>
             </li>
             <li>
-              <a href="https://www.example.com">Images</a>
+              <a href="./resume">Resume</a>
             </li>
             <li>
-              <a href="https://www.example.com">Locations</a>
-            </li>
-            <li>
-              <a href="https://www.example.com">Maps</a>
+              <a href="./contact">Contact</a>
             </li>
           </ul>
         </nav>

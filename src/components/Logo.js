@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import "../styles/main.css";
 
-class Project extends Component {
+class Logo extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="project">Project</div>
+        <div>
+          <a href="./">Logo</a>
+        </div>
       </React.Fragment>
     );
   }
 }
 
-export default Project;
+export default Logo;
