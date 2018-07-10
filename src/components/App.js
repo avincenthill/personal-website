@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+//import $ from 'jquery'
+//import _ from 'underscore'
 import Nav from "./Nav";
 import Footer from "./Footer";
 import "../styles/main.css";
