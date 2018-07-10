@@ -11,7 +11,7 @@ class App extends Component {
       <React.Fragment>
         <Nav />
         <br />
-        <div>App</div>
+        <div className="app">App</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
           tempora rerum, est autem cupiditate, corporis a qui libero ipsum

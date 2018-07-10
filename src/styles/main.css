@@ -22,13 +22,14 @@ body {
 nav ul {
   /* flexbox container */
   margin: 0;
-  padding: 0;
+  padding: 1vmin;
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 nav li {
@@ -46,7 +47,7 @@ nav a {
 }
 
 /* project styling TBD*/
-div projectWrapper {
+div.projectWrapper {
   /* flexbox container */
   margin: 0;
   padding: 0;
@@ -58,8 +59,26 @@ div projectWrapper {
   text-align: center;
 }
 
-div project {
-  /* flexbox items TBD*/
+div.project {
+  /* flexbox items TBD */
   flex-grow: 1;
   flex-shrink: 1;
+  padding: 20vmin;
+}
+
+/* logo styling - center in li.logo */
+img.logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+li.logo {
+  width: 6vh;
+  height: 6vh;
+  text-align: center;
+}
+
+/* app styling */
+p {
+  padding: 2vmin;
 }
