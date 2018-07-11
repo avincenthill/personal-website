@@ -8,9 +8,11 @@ class Resume extends Component {
   render() {
     return (
       <React.Fragment>
-        <a href={"/pdf/Alexander J. Vincent-Hill - Resume.pdf"}>
+        <a
+          href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
+          download="Alexander J. Vincent-Hill - Resume.pdf"
+        >
           Download resume!
-          {/* TBD fix this link to pdf, goes to 404 */}
         </a>
         <Document file={resume}>
           <Page pageNumber={1} renderTextLayer={false} />
