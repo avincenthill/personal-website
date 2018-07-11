@@ -97,11 +97,24 @@ p {
 }
 
 /* resume styling */
-/* TBD fix for iPhone dynamic sizes */
+/* TBD height fix for iPhone dynamic sizes */
+div.react-pdf__Page {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
 canvas.react-pdf__Page__canvas {
-  padding-left: 0;
-  padding-right: 0;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+}
+
+/* footer styling */
+div.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1vmin;
 }

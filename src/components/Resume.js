@@ -8,15 +8,13 @@ class Resume extends Component {
   render() {
     return (
       <React.Fragment>
-        <div class="resume">
-          <Document file={resume}>
-            <Page pageNumber={1} renderTextLayer={false} />
-            <a href={"../pdf/Alexander J. Vincent-Hill - Resume.pdf"}>
-              Download resume!
-              {/* TBD fix this link to pdf, goes to 404 */}
-            </a>
-          </Document>
-        </div>
+        <a href={"/pdf/Alexander J. Vincent-Hill - Resume.pdf"}>
+          Download resume!
+          {/* TBD fix this link to pdf, goes to 404 */}
+        </a>
+        <Document file={resume}>
+          <Page pageNumber={1} renderTextLayer={false} />
+        </Document>
       </React.Fragment>
     );
   }
