@@ -10,6 +10,7 @@ import Contact from "./Contact";
 const Router = () => (
   <BrowserRouter>
     <Switch>
+      {/*TBD fix routing in heroku build*/}
       <Route exact path="/" component={App} />
       <Route exact path="/about" component={About} />
       <Route exact path="/projects" component={ProjectsWrapper} />
