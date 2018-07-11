@@ -15,14 +15,18 @@ class Resume extends Component {
         >
           Download resume!
         </a>
-        <Document file={resume} onLoadSuccess={this.resizeResume()}>
+        <Document
+          className="resume"
+          file={resume}
+          onLoadSuccess={this.resizeResume()}
+        >
           <Page pageNumber={1} renderTextLayer={false} />
         </Document>
       </React.Fragment>
     );
   }
   componentDidMount() {
-    setTimeout(() => this.resizeResume(), 500);
+    setTimeout(() => this.resizeResume(), 750);
   }
   resizeResume() {
     /* brutal jquery hack to resize pdf after mounting/loading with react-pdf */

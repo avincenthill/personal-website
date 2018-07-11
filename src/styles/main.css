@@ -1,9 +1,15 @@
 /* -----------css variables----------- */
 :root {
+  --color1: #ffffff;
+  --color2: #000000;
+  --color3: grey;
+  --color4: rgb(53, 53, 53);
+  /*
   --color1: #000000;
   --color2: #ffffff;
   --color3: grey;
   --color4: rgb(53, 53, 53);
+  */
 }
 
 /* -----------all styling----------- */
@@ -112,6 +118,10 @@ canvas.react-pdf__Page__canvas {
   position: relative;
 }
 
+.resume {
+  padding: 2vmin;
+}
+
 /* footer styling */
 div.footer {
   position: fixed;
@@ -141,7 +151,7 @@ div.footer.h2 {
   text-align: center;
   font-size: 1.5vh;
 
-  top: 75%;
+  top: 70%;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
