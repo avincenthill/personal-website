@@ -6,19 +6,27 @@ import About from "./About";
 import ProjectsWrapper from "./ProjectsWrapper";
 import Resume from "./Resume";
 import Contact from "./Contact";
+import SortsWrapper from "./SortsWrapper";
+import Home from "./Home";
 
 const Router = () => (
   <BrowserRouter>
-    <Switch>
-      {/*TBD fix routing in heroku build*/}
-      <Route exact path="/" component={App} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/projects" component={ProjectsWrapper} />
-      <Route exact path="/resume" component={Resume} />
-      <Route exact path="/contact" component={Contact} />
-      <Route component={NotFound} />
-    </Switch>
+    <App>
+      <Switch>
+        <Route exact path="/about" component={About} />
+        <Route exact path="/projects" component={ProjectsWrapper} />
+        <Route exact path="/resume" component={Resume} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/sorting" component={SortsWrapper} />
+        <Route exact path="/" component={Home} />
+        <Route component={NotFound} />
+      </Switch>
+    </App>
   </BrowserRouter>
 );
 
 export default Router;
+
+/*
+<Route component={NotFound} />
+*/

@@ -5,6 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <React.Fragment>
+        <br />
         <div>Copywrite Alexander J. Vincent-Hill 2018</div>
       </React.Fragment>
     );

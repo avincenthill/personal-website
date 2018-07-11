@@ -26,6 +26,7 @@ class Nav extends Component {
             </li>
           </ul>
         </nav>
+        <br />
       </React.Fragment>
     );
   }

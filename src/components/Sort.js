@@ -12,3 +12,4 @@ class Sort extends Component {
 }
 
 export default Sort;
+//import Sort from "./Sort";

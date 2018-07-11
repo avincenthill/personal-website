@@ -1,15 +1,13 @@
 //a ProjectsWrapper react component
 import React, { Component } from "react";
 import "../styles/main.css";
-import Nav from "./Nav";
 import Project from "./Project";
 
 class ProjectsWrapper extends Component {
   render() {
     return (
       <React.Fragment>
-        <Nav />
-        <br />
+        <a href="./sorting">SortsWrapper</a>
         <div className="projectWrapper">
           <Project />
           <Project />
