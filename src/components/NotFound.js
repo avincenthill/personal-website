@@ -5,6 +5,7 @@ class NotFound extends Component {
   render() {
     return (
       <React.Fragment>
+        <br />
         <div>404 Not Found</div>
       </React.Fragment>
     );

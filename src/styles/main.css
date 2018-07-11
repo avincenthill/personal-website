@@ -1,9 +1,9 @@
 /* -----------css variables----------- */
 :root {
   --color1: #000000;
-  --color2: darkgray;
-  --color3: #ffffff;
-  --color4: grey;
+  --color2: #ffffff;
+  --color3: grey;
+  --color4: rgb(53, 53, 53);
 }
 
 /* -----------all styling----------- */
@@ -11,7 +11,7 @@
 /* body styling */
 body {
   /* default styling */
-  background-color: var(--color3);
+  background-color: var(--color2);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2vh;
@@ -79,6 +79,20 @@ li.logo {
 }
 
 /* app styling */
+div.app {
+  font-size: 20vmin;
+}
+
 p {
   padding: 2vmin;
+}
+
+/* resume styling */
+/* TBD fix for iPhone dynamic sizes */
+canvas.react-pdf__Page__canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
