@@ -7,18 +7,16 @@ import ProjectsWrapper from "./ProjectsWrapper";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import SortsWrapper from "./SortsWrapper";
-import Home from "./Home";
 
 const Router = () => (
   <BrowserRouter>
     <App>
       <Switch>
-        <Route exact path="/about" component={About} />
         <Route exact path="/projects" component={ProjectsWrapper} />
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/sorting" component={SortsWrapper} />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={About} />
         <Route component={NotFound} />
       </Switch>
     </App>

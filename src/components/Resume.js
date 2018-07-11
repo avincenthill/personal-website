@@ -28,6 +28,9 @@ class Resume extends Component {
   componentDidMount() {
     setTimeout(() => this.resizeResume(), 750);
   }
+  componentDidUpdate() {
+    setTimeout(() => this.resizeResume(), 750);
+  }
   resizeResume() {
     /* brutal jquery hack to resize pdf after mounting/loading with react-pdf */
     var img = $("canvas.react-pdf__Page__canvas");
