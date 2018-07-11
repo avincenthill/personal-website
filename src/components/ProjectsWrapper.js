@@ -7,7 +7,6 @@ class ProjectsWrapper extends Component {
   render() {
     return (
       <React.Fragment>
-        <a href="./sorting">SortsWrapper</a>
         <div className="projectWrapper">
           <Project />
           <Project />

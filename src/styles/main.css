@@ -124,9 +124,8 @@ canvas.react-pdf__Page__canvas {
 div.footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 3vmin;
   width: 100%;
-  padding: 1vmin;
   background-color: var(--color2);
   font-size: 1.5vh;
 }
