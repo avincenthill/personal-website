@@ -9,7 +9,7 @@ class Nav extends Component {
         <nav>
           {/* TBD sticky nav */}
           <ul id="nav">
-            <li class="logo">
+            <li className="logo">
               <Logo />
             </li>
             <li>

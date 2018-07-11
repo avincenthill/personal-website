@@ -97,7 +97,6 @@ p {
 }
 
 /* resume styling */
-/* TBD height fix for iPhone dynamic sizes */
 div.react-pdf__Page {
   position: relative;
   width: 100%;
@@ -121,4 +120,36 @@ div.footer {
   width: 100%;
   padding: 1vmin;
   background-color: var(--color2);
+  font-size: 1.5vh;
+}
+
+div.footer.h2 {
+  font-size: 0.5vh;
+}
+
+/* contact styling */
+.contact .h1 {
+  text-align: left;
+  width: 50%;
+  margin: auto;
+  font-size: 2.5vh;
+  display: table;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.contact .h2 {
+  text-align: center;
+  font-size: 1.5vh;
+
+  top: 75%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.contact {
+  text-align: center;
+  font-size: 4vh;
 }

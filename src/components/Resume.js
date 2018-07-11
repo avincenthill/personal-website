@@ -22,7 +22,7 @@ class Resume extends Component {
     );
   }
   componentDidMount() {
-    setTimeout(() => this.resizeResume(), 1000);
+    setTimeout(() => this.resizeResume(), 500);
   }
   resizeResume() {
     /* brutal jquery hack to resize pdf after mounting/loading with react-pdf */
