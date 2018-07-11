@@ -29,6 +29,14 @@ class Contact extends Component {
               www.github.com/avincenthill/
             </a>
             <br />
+            <b>Resume: </b>
+            <a
+              href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
+              download="Alexander J. Vincent-Hill - Resume.pdf"
+            >
+              Alexander J. Vincent-Hill - Resume.pdf
+            </a>
+            <br />
           </div>
           <div className="h2">
             <br />
