@@ -128,6 +128,7 @@ div.footer {
   width: 100%;
   background-color: var(--color2);
   font-size: 1.5vh;
+  box-shadow: 0 50vh 0 50vh var(--color2);
 }
 
 div.footer.h2 {
