@@ -72,6 +72,13 @@ img.logo {
   max-height: 100%;
 }
 
+div.logo404 {
+  width: 15vh;
+  height: 15vh;
+  text-align: center;
+  margin: auto;
+}
+
 li.logo {
   width: 6vh;
   height: 6vh;

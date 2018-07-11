@@ -5,7 +5,7 @@ class Logo extends Component {
   render() {
     return (
       <React.Fragment>
-        <a href="./">
+        <a href="/">
           <img
             className="logo"
             src={require("../img/AVH-Design-Logo.png")}
