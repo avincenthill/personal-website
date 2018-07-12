@@ -21,7 +21,7 @@ class About extends Component {
             <br />
             <br />
             Check out my <a href="/projects">projects</a> to see how well I
-            could contribute to your team!"
+            could contribute to your team.
             <br />
             <br />
             I'm currently looking for opportunities to learn and develop at
