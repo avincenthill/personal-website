@@ -14,18 +14,8 @@
 
 /* -----------all styling----------- */
 /* dynamic from https://stackoverflow.com/questions/18477016/switching-css-classes-based-on-screen-size */
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */
-}
-
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
   /* body styling */
   body {
     /* default styling */
@@ -201,7 +191,7 @@
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 400px) {
   /* body styling */
   body {
     /* default styling */

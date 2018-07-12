@@ -27,7 +27,7 @@ class About extends Component {
             <br />
             <br />
             I'm currently looking for opportunities to learn and develop at
-            exciting companies.
+            exciting companies in big cities.
           </div>
         </div>
       </React.Fragment>
