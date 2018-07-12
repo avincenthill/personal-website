@@ -6,18 +6,20 @@ class Project extends Component {
     return (
       <React.Fragment>
         <div className="project">
-          <a href={this.props.projectLink} className="projectDescription">
-            <figure className="projectFigure">
+          <figure className="projectFigure">
+            <a href={this.props.projectLink} className="projectDescription">
               <figcaption className="projectFigcaption">
                 {this.props.projectDescription}
               </figcaption>
+            </a>
+            <a href={this.props.projectLink} className="projectDescription">
               <img
-                className="projectImg"
+                className="projectImg btn"
                 src={this.props.projectImg}
                 alt={this.props.projectName}
               />
-            </figure>
-          </a>
+            </a>
+          </figure>
         </div>
       </React.Fragment>
     );
