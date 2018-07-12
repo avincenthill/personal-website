@@ -9,7 +9,7 @@ class Nav extends Component {
     return (
       <React.Fragment>
         <nav>
-          {/* TBD sticky nav */}
+          {/* TBD make sticky nav */}
           <ul id="nav">
             <li className="logo btn">
               <Logo />

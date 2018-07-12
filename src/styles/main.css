@@ -200,14 +200,18 @@ div.footer.h2 {
 }
 
 /* contact styling */
-.contact .h1 {
-  text-align: left;
-  width: 50%;
+.contact .contactsWrapper {
+  text-align: center;
+  width: 90%;
   margin: auto;
   font-size: 2.25vh;
   display: table;
   overflow: hidden;
-  line-height: 4vmin;
+  line-height: 3vmin;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 2vmin;
 }
 .contact .h2 {
   text-align: center;
@@ -220,11 +224,22 @@ div.footer.h2 {
   right: 0;
 }
 
+.contactItem {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 1vmin;
+  padding-top: 3vmin;
+}
+
 .contact {
   text-align: center;
   font-size: 4vh;
   color: var(--color1);
   padding-top: 6vmin;
+}
+
+Ionicon {
+  padding-bottom: 1vmin;
 }
 
 /* about styling */
@@ -282,17 +297,6 @@ img.headshot {
     align-items: center;
     font-size: 5vh;
     font-weight: bold;
-  }
-
-  /* contact styling */
-  .contact .h1 {
-    text-align: left;
-    width: 50%;
-    margin: auto;
-    font-size: 2.25vh;
-    display: table;
-    overflow: hidden;
-    line-height: 2.5vmin;
   }
 
   /* about styling */

@@ -1,6 +1,7 @@
 //a Contact react component
 import React, { Component } from "react";
 import "../styles/main.css";
+import Ionicon from "react-ionicons";
 
 //TBD make these icons not words
 class Contact extends Component {
@@ -9,43 +10,45 @@ class Contact extends Component {
       <React.Fragment>
         <div className="contact">
           <b>Alexander (Alex) John Vincent-Hill</b>
-          <div className="h1">
+          <br />
+          <div className="contactsWrapper">
             <br />
-            <br />
-            <b>email: </b>
-            <br />
-            <a href="mailto:alexanderjvincenthill@gmail.com">
-              alexanderjvincenthill@gmail.com
-            </a>
-            <br />
-            <br />
-            <b>phone: </b>
-            <br />
-            (541) 602-9122
-            <br />
-            <br />
-            <b>LinkedIn: </b>
-            <br />
-            <a href="https://www.linkedin.com/in/avincenthill/">
-              www.linkedin.com/in/avincenthill/
-            </a>
-            <br />
-            <br />
-            <b>Github: </b>
-            <br />
-            <a href="https://www.github.com/avincenthill/">
-              www.github.com/avincenthill/
-            </a>
-            <br />
-            <br />
-            <b>Resume: </b>
-            <br />
-            <a
-              href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
-              download="Alexander J. Vincent-Hill - Resume.pdf"
-            >
-              Alexander J. Vincent-Hill - Resume.pdf
-            </a>
+            <div className="contactItem">
+              <Ionicon icon="ios-mail" fontSize="8vmin" color="white" />
+              <br />
+              <a href="mailto:alexanderjvincenthill@gmail.com">
+                alexanderjvincenthill@gmail.com
+              </a>
+            </div>
+            <div className="contactItem">
+              <Ionicon icon="ios-call" fontSize="8vmin" color="white" />
+              <br />
+              (541) 602-9122
+            </div>
+            <div className="contactItem">
+              <Ionicon icon="logo-linkedin" fontSize="8vmin" color="white" />
+              <br />
+              <a href="https://www.linkedin.com/in/avincenthill">
+                www.linkedin.com/in/avincenthill/
+              </a>
+            </div>
+            <div className="contactItem">
+              <Ionicon icon="logo-github" fontSize="8vmin" color="white" />
+              <br />
+              <a href="https://www.github.com/avincenthill">
+                www.github.com/avincenthill/
+              </a>
+            </div>
+            <div className="contactItem">
+              <Ionicon icon="ios-document" fontSize="8vmin" color="white" />
+              <br />
+              <a
+                href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
+                download="Alexander J. Vincent-Hill - Resume.pdf"
+              >
+                Alexander J. Vincent-Hill - Resume.pdf
+              </a>
+            </div>
             <br />
           </div>
           <div className="h2">
@@ -80,6 +83,7 @@ class Contact extends Component {
                 alt="PayPal - The safer, easier way to pay online!"
               />
               <img
+                class="paypal-button"
                 alt=""
                 border="0"
                 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"

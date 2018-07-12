@@ -9,7 +9,7 @@ class NotFound extends Component {
         <br />
         <div>404 Not Found</div>
         <br />
-        <div className="logo404">
+        <div className="logo404 btn">
           <Logo />
         </div>
       </React.Fragment>
