@@ -16,18 +16,22 @@ class Contact extends Component {
               alexanderjvincenthill@gmail.com
             </a>
             <br />
+            <br />
             <b>phone: </b>
             (541) 602-9122
+            <br />
             <br />
             <b>LinkedIn: </b>
             <a href="https://www.linkedin.com/in/avincenthill/">
               www.linkedin.com/in/avincenthill/
             </a>
             <br />
+            <br />
             <b>Github: </b>
             <a href="https://www.github.com/avincenthill/">
               www.github.com/avincenthill/
             </a>
+            <br />
             <br />
             <b>Resume: </b>
             <a

@@ -13,153 +13,370 @@
 }
 
 /* -----------all styling----------- */
-
-/* body styling */
-body {
-  /* default styling */
-  background-color: var(--color2);
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2vh;
-  z-index: -1;
-  color: var(--color1);
-  text-decoration: none;
+/* dynamic from https://stackoverflow.com/questions/18477016/switching-css-classes-based-on-screen-size */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
 }
 
-/* nav styling */
-nav ul {
-  /* flexbox container */
-  margin: 0;
-  padding: 1vmin;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
 }
 
-nav li {
-  /* flexbox items */
-  flex-grow: 1;
-  flex-shrink: 1;
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 375px) {
+  /* body styling */
+  body {
+    /* default styling */
+    background-color: var(--color2);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    z-index: -1;
+    color: var(--color1);
+    text-decoration: none;
+  }
+
+  /* nav styling */
+  nav ul {
+    /* flexbox container */
+    margin: 0;
+    padding: 1vmin;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  nav li {
+    /* flexbox items */
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  nav a {
+    /* nav links */
+    text-decoration: none;
+    padding: 2vmin;
+    transition: all 0.2s;
+    color: var(--color1);
+  }
+
+  /* project styling TBD*/
+  div.projectWrapper {
+    /* flexbox container */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  div.project {
+    /* flexbox items TBD */
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 20vmin;
+  }
+
+  /* logo styling - center in li.logo */
+  img.logo {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  div.logo404 {
+    text-align: center;
+    margin: auto;
+  }
+
+  li.logo {
+    width: 7vmin;
+    height: 7vmin;
+    text-align: center;
+  }
+
+  /* resume styling */
+  div.react-pdf__Page {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  canvas.react-pdf__Page__canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  .resume {
+    padding: 2vmin;
+  }
+
+  /* footer styling */
+  div.footer {
+    position: fixed;
+    left: 0;
+    bottom: 3vmin;
+    width: 100%;
+    background-color: var(--color2);
+    font-size: 1.5vh;
+    box-shadow: 0 50vh 0 50vh var(--color2);
+    padding-top: 1vmin;
+  }
+
+  div.footer.h2 {
+    font-size: 0.5vh;
+  }
+
+  /* contact styling */
+  .contact .h1 {
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    font-size: 2.25vh;
+    display: table;
+    overflow: hidden;
+    line-height: 4vmin;
+  }
+  .contact .h2 {
+    text-align: center;
+    font-size: 1.5vh;
+    top: 70%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .contact {
+    text-align: center;
+    font-size: 4vh;
+    color: var(--color1);
+  }
+
+  /* about styling */
+  div.aboutWrapper {
+    /* flexbox container */
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 4vmin;
+    align-items: center;
+  }
+
+  div.blurb {
+    flex-grow: 2;
+    flex-shrink: 1;
+    font-size: 5vw;
+    text-align: left;
+    padding: 5vmin;
+  }
+
+  div.headshot {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 5vmin;
+  }
+
+  img.headshot {
+    max-width: 60vw;
+    max-height: 60vw;
+    margin: auto;
+  }
 }
 
-nav a {
-  /* nav links */
-  text-decoration: none;
-  padding: 2vmin;
-  transition: all 0.2s;
-  color: var(--color1);
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 375px) {
+  /* body styling */
+  body {
+    /* default styling */
+    background-color: var(--color2);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    z-index: -1;
+    color: var(--color1);
+    text-decoration: none;
+  }
+
+  /* nav styling */
+  nav ul {
+    /* flexbox container */
+    margin: 0;
+    padding: 1vmin;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  nav li {
+    /* flexbox items */
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  nav a {
+    /* nav links */
+    text-decoration: none;
+    padding: 2vmin;
+    transition: all 0.2s;
+    color: var(--color1);
+  }
+
+  /* project styling TBD*/
+  div.projectWrapper {
+    /* flexbox container */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  div.project {
+    /* flexbox items TBD */
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 20vmin;
+  }
+
+  /* logo styling - center in li.logo */
+  img.logo {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  div.logo404 {
+    text-align: center;
+    margin: auto;
+  }
+
+  li.logo {
+    width: 7vmin;
+    height: 7vmin;
+    text-align: center;
+  }
+
+  /* resume styling */
+  div.react-pdf__Page {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  canvas.react-pdf__Page__canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  .resume {
+    padding: 2vmin;
+  }
+
+  /* footer styling */
+  div.footer {
+    position: fixed;
+    left: 0;
+    bottom: 3vmin;
+    width: 100%;
+    background-color: var(--color2);
+    font-size: 1.5vh;
+    box-shadow: 0 50vh 0 50vh var(--color2);
+    padding-top: 1vmin;
+  }
+
+  div.footer.h2 {
+    font-size: 0.5vh;
+  }
+
+  /* contact styling */
+  .contact .h1 {
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    font-size: 2.25vh;
+    display: table;
+    overflow: hidden;
+    line-height: 4vmin;
+  }
+  .contact .h2 {
+    text-align: center;
+    font-size: 1.5vh;
+    top: 70%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .contact {
+    text-align: center;
+    font-size: 4vh;
+    color: var(--color1);
+  }
+
+  /* about styling */
+  div.aboutWrapper {
+    /* flexbox container */
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 4vmin;
+    align-items: center;
+  }
+
+  div.blurb {
+    flex-grow: 2;
+    flex-shrink: 1;
+    font-size: 2vw;
+    text-align: left;
+    padding: 5vmin;
+  }
+
+  div.headshot {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 5vmin;
+  }
+
+  img.headshot {
+    max-width: 25vw;
+    max-height: 25vw;
+    margin: auto;
+  }
 }
 
-/* project styling TBD*/
-div.projectWrapper {
-  /* flexbox container */
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-div.project {
-  /* flexbox items TBD */
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: 20vmin;
-}
-
-/* logo styling - center in li.logo */
-img.logo {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-div.logo404 {
-  text-align: center;
-  margin: auto;
-}
-
-li.logo {
-  width: 6vh;
-  height: 6vh;
-  text-align: center;
-}
-
-/* app styling */
-div.app {
-  font-size: 20vmin;
-}
-
-p {
-  padding: 2vmin;
-}
-
-/* resume styling */
-div.react-pdf__Page {
-  position: relative;
-  width: 100%;
-  text-align: center;
-}
-
-canvas.react-pdf__Page__canvas {
-  display: block;
-  max-width: 100%;
-  max-height: 1%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
-.resume {
-  padding: 2vmin;
-}
-
-/* footer styling */
-div.footer {
-  position: fixed;
-  left: 0;
-  bottom: 3vmin;
-  width: 100%;
-  background-color: var(--color2);
-  font-size: 1.5vh;
-  box-shadow: 0 50vh 0 50vh var(--color2);
-  padding-top: 1vmin;
-}
-
-div.footer.h2 {
-  font-size: 0.5vh;
-}
-
-/* contact styling */
-.contact .h1 {
-  text-align: left;
-  width: 50%;
-  margin: auto;
-  font-size: 2.25vh;
-  display: table;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: 4.5vmin;
-}
-.contact .h2 {
-  text-align: center;
-  font-size: 1.5vh;
-
-  top: 70%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-.contact {
-  text-align: center;
-  font-size: 4vh;
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
 }
