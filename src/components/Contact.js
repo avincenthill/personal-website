@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import "../styles/main.css";
 
 //TBD make these icons not words
-
 class Contact extends Component {
   render() {
     return (
@@ -14,28 +13,33 @@ class Contact extends Component {
             <br />
             <br />
             <b>email: </b>
+            <br />
             <a href="mailto:alexanderjvincenthill@gmail.com">
               alexanderjvincenthill@gmail.com
             </a>
             <br />
             <br />
             <b>phone: </b>
+            <br />
             (541) 602-9122
             <br />
             <br />
             <b>LinkedIn: </b>
+            <br />
             <a href="https://www.linkedin.com/in/avincenthill/">
               www.linkedin.com/in/avincenthill/
             </a>
             <br />
             <br />
             <b>Github: </b>
+            <br />
             <a href="https://www.github.com/avincenthill/">
               www.github.com/avincenthill/
             </a>
             <br />
             <br />
             <b>Resume: </b>
+            <br />
             <a
               href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
               download="Alexander J. Vincent-Hill - Resume.pdf"

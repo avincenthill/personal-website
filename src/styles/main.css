@@ -13,7 +13,7 @@
 }
 
 /* -----------all styling----------- */
-/* body styling */
+/* default styling */
 body {
   /* default styling */
   background-color: var(--color2);
@@ -25,11 +25,19 @@ body {
   text-decoration: none;
 }
 
+a {
+  color: var(--color1);
+  text-decoration: underline;
+}
+
 /* nav styling */
 nav ul {
   /* flexbox container */
   margin: 0;
-  padding: 1vmin;
+  padding-left: 1vmin;
+  padding-right: 1vmin;
+  padding-top: 2vmin;
+  padding-bottom: 1vmin;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -87,8 +95,8 @@ div.logo404 {
 }
 
 li.logo {
-  width: 7vmin;
-  height: 7vmin;
+  width: 8vmin;
+  height: 8vmin;
   text-align: center;
 }
 
@@ -194,6 +202,17 @@ img.headshot {
 /* dynamic from https://stackoverflow.com/questions/18477016/switching-css-classes-based-on-screen-size */
 /* Desktops ----------- */
 @media only screen and (min-width: 1243px) {
+  /* contact styling */
+  .contact .h1 {
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    font-size: 2.25vh;
+    display: table;
+    overflow: hidden;
+    line-height: 2.5vmin;
+  }
+
   /* about styling */
   div.aboutWrapper {
     /* flexbox container */
