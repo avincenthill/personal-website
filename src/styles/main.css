@@ -12,10 +12,11 @@
   */
 }
 
+/* TBD master dynamic css media queries */
 /* -----------all styling----------- */
 /* dynamic from https://stackoverflow.com/questions/18477016/switching-css-classes-based-on-screen-size */
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1243px) {
   /* body styling */
   body {
     /* default styling */
@@ -191,7 +192,7 @@
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 1243px) {
   /* body styling */
   body {
     /* default styling */
