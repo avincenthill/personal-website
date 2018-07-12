@@ -17,7 +17,7 @@ class About extends Component {
           </div>
           <div className="blurb">
             <br />
-            <Emoji text=" :wave: Hi, I'm AVH!" />
+            <Emoji text=" :wave: Hi, I'm Alex!" />
             <br />
             <br />
             Check out my <a href="/projects">projects</a> to see how well I
