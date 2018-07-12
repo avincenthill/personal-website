@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styles/main.css";
 import Logo from "./Logo";
+import Ionicon from "react-ionicons";
 
 /* TBD put nav under thumb for mobile */
 class Nav extends Component {
@@ -21,6 +22,11 @@ class Nav extends Component {
             </li>
             <li className="btn">
               <a href="./contact">Contact</a>
+            </li>
+            <li className="btn">
+              <a href="https://github.com/avincenthill">
+                <Ionicon icon="logo-github" fontSize="8vmin" color="white" />
+              </a>
             </li>
           </ul>
         </nav>
