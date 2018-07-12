@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="footer">Copywrite Alexander J. Vincent-Hill 2018</div>
+        <div className="footer">Copyright Alexander J. Vincent-Hill 2018</div>
       </React.Fragment>
     );
   }

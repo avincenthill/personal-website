@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import "../styles/main.css";
 
+//TBD make these icons not words
+
 class Contact extends Component {
   render() {
     return (
