@@ -20,14 +20,14 @@ class About extends Component {
             <Emoji text=" :wave: Hi, I'm AVH!" />
             <br />
             <br />
-            <Emoji
-              text="Check out my projects to see how well I could contribute to your
-            team!"
-            />
+            Check out my <a href="/projects">projects</a> to see how well I
+            could contribute to your team!"
             <br />
             <br />
             I'm currently looking for opportunities to learn and develop at
             exciting companies in big cities.
+            <br />
+            <br />
           </div>
         </div>
       </React.Fragment>
