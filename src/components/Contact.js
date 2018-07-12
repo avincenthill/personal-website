@@ -60,7 +60,7 @@ class Contact extends Component {
             </div>
             <br />
             <form
-              class="paypal_button"
+              class="paypal_button btn"
               action="https://www.paypal.com/cgi-bin/webscr"
               method="post"
               target="_top"

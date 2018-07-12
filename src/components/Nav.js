@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../styles/main.css";
 import Logo from "./Logo";
 
+/* TBD put nav under thumb for mobile */
 class Nav extends Component {
   render() {
     return (
@@ -9,16 +10,16 @@ class Nav extends Component {
         <nav>
           {/* TBD sticky nav */}
           <ul id="nav">
-            <li className="logo">
+            <li className="logo btn">
               <Logo />
             </li>
-            <li>
+            <li className="btn">
               <a href="./projects">Projects</a>
             </li>
-            <li>
+            <li className="btn">
               <a href="./resume">Resume</a>
             </li>
-            <li>
+            <li className="btn">
               <a href="./contact">Contact</a>
             </li>
           </ul>
