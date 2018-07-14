@@ -25,7 +25,7 @@ class Nav extends Component {
             </li>
             <li className="btn">
               <a href="https://github.com/avincenthill">
-                <Ionicon icon="logo-github" fontSize="8vmin" color="white" />
+                <Ionicon icon="logo-github" fontSize="2.5em" color="white" />
               </a>
             </li>
           </ul>

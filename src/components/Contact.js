@@ -15,7 +15,7 @@ class Contact extends Component {
             <br />
             <div className="contactItem btn">
               <a href="mailto:alexanderjvincenthill@gmail.com">
-                <Ionicon icon="ios-mail" fontSize="8vmin" color="white" />
+                <Ionicon icon="ios-mail" fontSize="2.25em" color="white" />
               </a>
               <br />
               <a href="mailto:alexanderjvincenthill@gmail.com">
@@ -24,14 +24,14 @@ class Contact extends Component {
             </div>
             <div className="contactItem btn">
               <a href="tel:+1-541-602-9122">
-                <Ionicon icon="ios-call" fontSize="8vmin" color="white" />
+                <Ionicon icon="ios-call" fontSize="2.25em" color="white" />
               </a>
               <br />
               <a href="tel:+1-541-602-9122">(541) 602-9122</a>
             </div>
             <div className="contactItem btn">
               <a href="https://www.linkedin.com/in/avincenthill">
-                <Ionicon icon="logo-linkedin" fontSize="8vmin" color="white" />
+                <Ionicon icon="logo-linkedin" fontSize="2.25em" color="white" />
               </a>
               <br />
               <a href="https://www.linkedin.com/in/avincenthill">
@@ -40,7 +40,7 @@ class Contact extends Component {
             </div>
             <div className="contactItem btn">
               <a href="https://www.github.com/avincenthill">
-                <Ionicon icon="logo-github" fontSize="8vmin" color="white" />
+                <Ionicon icon="logo-github" fontSize="2.25em" color="white" />
               </a>
               <br />
               <a href="https://www.github.com/avincenthill">
@@ -51,7 +51,7 @@ class Contact extends Component {
               <a
                 href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
               >
-                <Ionicon icon="ios-document" fontSize="8vmin" color="white" />
+                <Ionicon icon="ios-document" fontSize="2.25em" color="white" />
               </a>
               <br />
               <a
