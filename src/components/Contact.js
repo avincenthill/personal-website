@@ -13,34 +13,46 @@ class Contact extends Component {
           <br />
           <div className="contactsWrapper">
             <br />
-            <div className="contactItem">
-              <Ionicon icon="ios-mail" fontSize="8vmin" color="white" />
+            <div className="contactItem btn">
+              <a href="mailto:alexanderjvincenthill@gmail.com">
+                <Ionicon icon="ios-mail" fontSize="8vmin" color="white" />
+              </a>
               <br />
               <a href="mailto:alexanderjvincenthill@gmail.com">
                 alexanderjvincenthill@gmail.com
               </a>
             </div>
-            <div className="contactItem">
-              <Ionicon icon="ios-call" fontSize="8vmin" color="white" />
+            <div className="contactItem btn">
+              <a href="tel:+1-541-602-9122">
+                <Ionicon icon="ios-call" fontSize="8vmin" color="white" />
+              </a>
               <br />
-              (541) 602-9122
+              <a href="tel:+1-541-602-9122">(541) 602-9122</a>
             </div>
-            <div className="contactItem">
-              <Ionicon icon="logo-linkedin" fontSize="8vmin" color="white" />
+            <div className="contactItem btn">
+              <a href="https://www.linkedin.com/in/avincenthill">
+                <Ionicon icon="logo-linkedin" fontSize="8vmin" color="white" />
+              </a>
               <br />
               <a href="https://www.linkedin.com/in/avincenthill">
                 www.linkedin.com/in/avincenthill/
               </a>
             </div>
-            <div className="contactItem">
-              <Ionicon icon="logo-github" fontSize="8vmin" color="white" />
+            <div className="contactItem btn">
+              <a href="https://www.github.com/avincenthill">
+                <Ionicon icon="logo-github" fontSize="8vmin" color="white" />
+              </a>
               <br />
               <a href="https://www.github.com/avincenthill">
                 www.github.com/avincenthill/
               </a>
             </div>
-            <div className="contactItem">
-              <Ionicon icon="ios-document" fontSize="8vmin" color="white" />
+            <div className="contactItem btn">
+              <a
+                href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
+              >
+                <Ionicon icon="ios-document" fontSize="8vmin" color="white" />
+              </a>
               <br />
               <a
                 href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
