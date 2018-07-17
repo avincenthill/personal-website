@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import "../styles/main.css";
 
 class Sort extends Component {
+  state = {
+    array: [],
+    numBars: 50
+  };
+
   clearCanvasNow = () => {
     const canvas = this.refs.canvas;
     const ctx = canvas.getContext("2d");
@@ -10,75 +15,81 @@ class Sort extends Component {
     ctx.fillStyle = "white";
     ctx.fill();
     ctx.closePath();
-    this.msg();
   };
 
-  msg = () => {
-    alert("msg");
+  initArrayState = () => {
+    const array = this.state.array.splice();
+    for (let i = 0; i < this.state.numBars; i++) {
+      array.push(i);
+    }
+    this.setState({ array: array });
   };
 
-  //TBD move component did mount stuff to outside, encapsulate and code sorting algos
-
-  componentDidMount() {
-    //canvas vars
+  clearCanvas = () => {
     const canvas = this.refs.canvas;
     const ctx = canvas.getContext("2d");
-    let canvasWidth = canvas.width;
-    let canvasHeight = canvas.height;
-    let numBars = 50;
-    let spacingFactor = numBars / 2;
-    let barWidth = canvasWidth / (numBars + spacingFactor);
-    let spacingWidth = canvasWidth - barWidth * numBars;
-    let clearCanvasNow = this.clearCanvasNow;
+    ctx.beginPath();
+    ctx.rect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.closePath();
+  };
 
-    //on canvas click
+  drawBar = (position, height, color) => {
+    const canvas = this.refs.canvas;
+    const ctx = canvas.getContext("2d");
+    let spacingFactor = this.state.numBars / 2;
+    let barWidth = canvas.width / (this.state.numBars + spacingFactor);
+    let spacingWidth = canvas.width - barWidth * this.state.numBars;
+    ctx.beginPath();
+    ctx.rect(
+      (canvas.width / this.state.numBars) * position +
+        spacingWidth / this.state.numBars / 2,
+      canvas.height - height,
+      barWidth,
+      height
+    );
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.closePath();
+  };
+
+  drawBarsFromArray = array => {
+    const canvas = this.refs.canvas;
+    this.clearCanvas();
+    for (let i = 0; i < array.length; i++) {
+      this.drawBar(
+        i,
+        (array[i] / this.state.numBars) * canvas.height * 0.9 +
+          canvas.height * 0.1,
+        "black"
+      );
+    }
+  };
+
+  handleCanvasClicks = () => {
+    const canvas = this.refs.canvas;
+    const name = this.props.sortName;
+    let clearCanvas = this.clearCanvas;
     canvas.addEventListener(
       "click",
       function() {
-        clearCanvasNow();
+        alert(name + " was clicked!");
+        clearCanvas();
       },
       false
     );
+  };
 
-    function clearCanvas() {
-      ctx.beginPath();
-      ctx.rect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "white";
-      ctx.fill();
-      ctx.closePath();
-    }
+  componentDidMount() {
+    this.initArrayState();
+    this.drawBarsFromArray(this.state.array);
+    this.handleCanvasClicks();
+  }
 
-    function drawBar(position, height, color) {
-      ctx.beginPath();
-      ctx.rect(
-        (canvasWidth / numBars) * position + spacingWidth / numBars / 2,
-        canvasHeight - height,
-        barWidth,
-        height
-      );
-      ctx.fillStyle = color;
-      ctx.fill();
-      ctx.closePath();
-    }
-
-    function drawBarsFromArray(array) {
-      clearCanvas();
-      for (let i = 0; i < array.length; i++) {
-        drawBar(
-          i,
-          (array[i] / numBars) * canvasHeight * 0.9 + canvasHeight * 0.1,
-          "black"
-        );
-      }
-    }
-
-    let barHeights = [];
-    for (let i = 0; i < numBars; i++) {
-      barHeights.push(i);
-    }
-    //let reversedBarHeights = barHeights.slice().reverse();
-
-    drawBarsFromArray(barHeights);
+  componentDidUpdate() {
+    this.clearCanvasNow();
+    this.drawBarsFromArray(this.state.array);
   }
 
   render() {
