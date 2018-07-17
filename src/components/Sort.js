@@ -24,8 +24,8 @@ class Sort extends Component {
     for (let i = 0; i < this.state.numBars; i++) {
       array.push(i);
     }
-    //this.setState({ array: _.shuffle(array) });
-    this.setState({ array: array });
+    this.setState({ array: _.shuffle(array) });
+    //this.setState({ array: array });
   };
 
   clearCanvas = () => {
@@ -63,25 +63,22 @@ class Sort extends Component {
     for (let i = 0; i < array.length; i++) {
       this.drawBar(
         i,
-        (array[i] / this.state.numBars) * canvas.height * 0.9 +
-          canvas.height * 0.1,
+        (array[i] / this.state.numBars) * canvas.height + canvas.height * 0.01,
         "black"
       );
     }
   };
 
   sort = () => {
-    //copy and edit state
+    this.checkIfSorted();
     const array = this.state.array.slice();
     let sortFunction = this.props.sortFunction;
-    this.setState({ array: sortFunction(array) });
-    this.checkIfSorted();
-
-    //TBD be careful with below
-    // while (!this.state.isSorted) {
-    //   this.sort();
-    //   this.checkIfSorted();
-    // }
+    let isSorted = this.state.isSorted;
+    setInterval(() => {
+      if (!isSorted) {
+        this.setState({ array: sortFunction(array) });
+      }
+    }, 50);
   };
 
   handleCanvasClicks = () => {
