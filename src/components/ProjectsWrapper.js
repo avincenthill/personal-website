@@ -4,18 +4,24 @@ import "../styles/main.css";
 import Project from "./Project";
 
 //project image imports
-import GitHubLogo from "../img/github_logo.png";
 import FetchLogo from "../img/fetch_logo.png";
 import ParticleSimulation from "../img/particles.png";
 import HilbertShirt from "../img/Hilbert.png";
 import NSAShirt from "../img/NSA.png";
 import PPPLogo from "../img/Picture-Perfect-Petals-Logo_500x500.png";
+import Sorting from "../img/sorting.jpg";
 
 class ProjectsWrapper extends Component {
   render() {
     return (
       <React.Fragment>
         <div className="projectWrapper">
+          <Project
+            projectName="Sorting Algorithms"
+            projectLink="/sorting"
+            projectImg={Sorting}
+            projectDescription="Sorting algos animated"
+          />
           <Project
             projectName="Fetch Automation"
             projectLink="https://www.doubleclickbygoogle.com/articles/fetch-aeg-presents-structured-data-files/"

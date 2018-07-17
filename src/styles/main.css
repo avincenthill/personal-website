@@ -30,6 +30,11 @@ body {
   margin: 2vmin;
 }
 
+canvas {
+  z-index: 99;
+  background-color: white;
+}
+
 a {
   color: var(--color1);
   text-decoration: underline;
@@ -273,6 +278,16 @@ img.headshot {
   max-width: 60vw;
   max-height: 60vw;
   margin: auto;
+}
+
+/* sorting styling */
+div.sortTitle {
+  font-size: 6vmin;
+  padding: 2vmin;
+}
+
+div.sortWrapper {
+  padding-bottom: 2vmin;
 }
 
 /* TBD master dynamic css media queries */
