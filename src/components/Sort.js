@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "../styles/main.css";
+import _ from "lodash";
 
 class Sort extends Component {
   state = {
     array: [],
-    numBars: 50
+    numBars: 50,
+    isSorted: false
   };
 
   clearCanvasNow = () => {
@@ -18,10 +20,11 @@ class Sort extends Component {
   };
 
   initArrayState = () => {
-    const array = this.state.array.splice();
+    const array = this.state.array.slice();
     for (let i = 0; i < this.state.numBars; i++) {
       array.push(i);
     }
+    //this.setState({ array: _.shuffle(array) });
     this.setState({ array: array });
   };
 
@@ -67,24 +70,48 @@ class Sort extends Component {
     }
   };
 
+  sort = () => {
+    //copy and edit state
+    const array = this.state.array.slice();
+    let sortFunction = this.props.sortFunction;
+    this.setState({ array: sortFunction(array) });
+    this.checkIfSorted();
+
+    //TBD be careful with below
+    // while (!this.state.isSorted) {
+    //   this.sort();
+    //   this.checkIfSorted();
+    // }
+  };
+
   handleCanvasClicks = () => {
     const canvas = this.refs.canvas;
-    const name = this.props.sortName;
-    let clearCanvas = this.clearCanvas;
+    const sort = this.sort;
     canvas.addEventListener(
       "click",
       function() {
-        alert(name + " was clicked!");
-        clearCanvas();
+        sort();
       },
       false
     );
+  };
+
+  checkIfSorted = () => {
+    let arr = this.state.array.slice();
+    this.setState({ isSorted: true });
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        this.setState({ isSorted: false });
+        break;
+      }
+    }
   };
 
   componentDidMount() {
     this.initArrayState();
     this.drawBarsFromArray(this.state.array);
     this.handleCanvasClicks();
+    this.checkIfSorted();
   }
 
   componentDidUpdate() {
