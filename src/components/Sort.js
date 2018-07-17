@@ -5,14 +5,24 @@ class Sort extends Component {
   componentDidMount() {
     const canvas = this.refs.canvas;
     const ctx = canvas.getContext("2d");
-    var canvasWidth = canvas.width;
-    var canvasHeight = canvas.height;
-    var numBars = 20;
-    var spacingFactor = numBars / 5;
-    var barWidth = canvasWidth / (numBars + spacingFactor);
-    var spacingWidth = canvasWidth - barWidth * numBars;
+    let canvasWidth = canvas.width;
+    let canvasHeight = canvas.height;
+    canvas.addEventListener(
+      "click",
+      function() {
+        drawBarsFromArray(reversedBarHeights);
+      },
+      false
+    );
+
+    //canvas sorting vars
+    let numBars = 20;
+    let spacingFactor = numBars / 5;
+    let barWidth = canvasWidth / (numBars + spacingFactor);
+    let spacingWidth = canvasWidth - barWidth * numBars;
 
     function drawBar(position, height, color) {
+      ctx.beginPath();
       ctx.rect(
         (canvasWidth / numBars) * position + spacingWidth / numBars / 2,
         canvasHeight - height,
@@ -21,31 +31,35 @@ class Sort extends Component {
       );
       ctx.fillStyle = color;
       ctx.fill();
+      ctx.closePath();
     }
 
-    function shuffle(a) {
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    }
-
-    var barHeights = [];
-    for (let i = 0; i < numBars; i++) {
-      barHeights.push(i);
+    function clearCanvas() {
+      ctx.beginPath();
+      ctx.rect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "white";
+      ctx.fill();
+      ctx.closePath();
     }
 
     function drawBarsFromArray(array) {
+      clearCanvas();
       for (let i = 0; i < array.length; i++) {
         drawBar(
           i,
           (array[i] / numBars) * canvasHeight * 0.9 + canvasHeight * 0.1,
-          "red"
+          "black"
         );
       }
     }
-    drawBarsFromArray(shuffle(barHeights));
+
+    let barHeights = [];
+    for (let i = 0; i < numBars; i++) {
+      barHeights.push(i);
+    }
+    let reversedBarHeights = barHeights.slice().reverse();
+
+    drawBarsFromArray(barHeights);
   }
 
   componentDidUpdate() {
