@@ -7,6 +7,10 @@ class SortsWrapper extends Component {
   render() {
     return (
       <React.Fragment>
+        <div className="sortsWrapperHeader">
+          Press the graphs to start sorting!
+        </div>
+        <br />
         <Sort sortName="Bubble Sort" />
         <Sort sortName="Heap Sort" />
         <Sort sortName="Quick Sort" />

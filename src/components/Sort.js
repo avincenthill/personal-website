@@ -2,24 +2,51 @@ import React, { Component } from "react";
 import "../styles/main.css";
 
 class Sort extends Component {
+  clearCanvasNow = () => {
+    const canvas = this.refs.canvas;
+    const ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.rect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.closePath();
+    this.msg();
+  };
+
+  msg = () => {
+    alert("msg");
+  };
+
+  //TBD move component did mount stuff to outside, encapsulate and code sorting algos
+
   componentDidMount() {
+    //canvas vars
     const canvas = this.refs.canvas;
     const ctx = canvas.getContext("2d");
     let canvasWidth = canvas.width;
     let canvasHeight = canvas.height;
+    let numBars = 50;
+    let spacingFactor = numBars / 2;
+    let barWidth = canvasWidth / (numBars + spacingFactor);
+    let spacingWidth = canvasWidth - barWidth * numBars;
+    let clearCanvasNow = this.clearCanvasNow;
+
+    //on canvas click
     canvas.addEventListener(
       "click",
       function() {
-        drawBarsFromArray(reversedBarHeights);
+        clearCanvasNow();
       },
       false
     );
 
-    //canvas sorting vars
-    let numBars = 20;
-    let spacingFactor = numBars / 5;
-    let barWidth = canvasWidth / (numBars + spacingFactor);
-    let spacingWidth = canvasWidth - barWidth * numBars;
+    function clearCanvas() {
+      ctx.beginPath();
+      ctx.rect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "white";
+      ctx.fill();
+      ctx.closePath();
+    }
 
     function drawBar(position, height, color) {
       ctx.beginPath();
@@ -30,14 +57,6 @@ class Sort extends Component {
         height
       );
       ctx.fillStyle = color;
-      ctx.fill();
-      ctx.closePath();
-    }
-
-    function clearCanvas() {
-      ctx.beginPath();
-      ctx.rect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "white";
       ctx.fill();
       ctx.closePath();
     }
@@ -57,13 +76,9 @@ class Sort extends Component {
     for (let i = 0; i < numBars; i++) {
       barHeights.push(i);
     }
-    let reversedBarHeights = barHeights.slice().reverse();
+    //let reversedBarHeights = barHeights.slice().reverse();
 
     drawBarsFromArray(barHeights);
-  }
-
-  componentDidUpdate() {
-    //TBD resize
   }
 
   render() {

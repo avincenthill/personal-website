@@ -16,6 +16,7 @@ const Router = () => (
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/sorting" component={SortsWrapper} />
+        <Route exact path="/index" component={About} />
         <Route exact path="/" component={About} />
         <Route component={NotFound} />
       </Switch>
