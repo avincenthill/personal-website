@@ -24,24 +24,43 @@ class SortsWrapper extends Component {
     return array;
   };
 
-  heapSort = array => {
+  bogoSort = array => {
     return _.shuffle(array);
   };
 
   quickSort = array => {
+    //TBD
     return _.shuffle(array);
   };
 
   render() {
     return (
       <React.Fragment>
-        <div className="sortsWrapperHeader">
-          Press the graphs to start sorting!
-        </div>
         <br />
-        <Sort sortName="Bubble Sort" sortFunction={this.bubbleSort} />
-        <Sort sortName="Heap Sort" sortFunction={this.heapSort} />
-        <Sort sortName="Quick Sort" sortFunction={this.quickSort} />
+        <Sort
+          sortName="Bubble Sort"
+          sortFunction={this.bubbleSort}
+          description="compare each pair of items and swap them if needed"
+          WCTC={"O(n^2)"}
+          ACTC={"Θ(n^2)"}
+          WCSC={"O(1)"}
+        />
+        <Sort
+          sortName="Bogo Sort"
+          sortFunction={this.bogoSort}
+          description="shuffle items and check if they are sorted"
+          WCTC={"O(∞)"}
+          ACTC={"Θ((n+1)!)"}
+          WCSC={"O(1)"}
+        />
+        <Sort
+          sortName="Quick Sort - TBD"
+          sortFunction={this.quickSort}
+          description="TBD"
+          WCTC={"TBD"}
+          ACTC={"TBD"}
+          WCSC={"TBD"}
+        />
       </React.Fragment>
     );
   }

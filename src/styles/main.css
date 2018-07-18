@@ -32,7 +32,6 @@ body {
 
 canvas {
   z-index: 99;
-  background-color: white;
 }
 
 a {
@@ -288,6 +287,11 @@ div.sortTitle {
 
 div.sortWrapper {
   padding-bottom: 5vmin;
+}
+
+div.sortInfo {
+  color: var(--color3);
+  font-size: 3vmin;
 }
 
 /* TBD master dynamic css media queries */

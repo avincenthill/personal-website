@@ -4,7 +4,6 @@ import _ from "lodash";
 
 //TBD add info about the sorts
 //TBD implement all sorts
-//TBD fix window height resize problem
 //TBD figure out why www.avh.party is harder than avh.party
 //TBD tweak font sizes by window height
 
@@ -134,7 +133,15 @@ class Sort extends Component {
         <canvas ref="canvas" width={window.innerWidth * 0.8} height={300} />
         <br />
         <div className="sortTitle">{this.props.sortName}</div>
-        <div className="sortInfo">Info about {this.props.sortName}</div>
+        <div className="sortInfo">
+          {this.props.description}
+          <br />
+          Worst Case Time: {this.props.WCTC}
+          <br />
+          Average Case Time: {this.props.ACTC}
+          <br />
+          Worst Case Space: {this.props.WCSC}
+        </div>
         <br />
       </div>
     );
