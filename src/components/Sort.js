@@ -2,21 +2,16 @@ import React, { Component } from "react";
 import "../styles/main.css";
 import _ from "lodash";
 
+//TBD add info about the sorts
+//TBD implement all sorts
+//TBD fix window height resize problem
+//TBD figure out why www.avh.party is harder than avh.party
+//TBD tweak font sizes by window height
+
 class Sort extends Component {
   state = {
     array: [],
-    numBars: 50,
-    isSorted: false
-  };
-
-  clearCanvasNow = () => {
-    const canvas = this.refs.canvas;
-    const ctx = canvas.getContext("2d");
-    ctx.beginPath();
-    ctx.rect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "white";
-    ctx.fill();
-    ctx.closePath();
+    numBars: 25
   };
 
   initArrayState = () => {
@@ -24,8 +19,8 @@ class Sort extends Component {
     for (let i = 0; i < this.state.numBars; i++) {
       array.push(i);
     }
+    //TBD other init states here
     this.setState({ array: _.shuffle(array) });
-    //this.setState({ array: array });
   };
 
   clearCanvas = () => {
@@ -33,7 +28,7 @@ class Sort extends Component {
     const ctx = canvas.getContext("2d");
     ctx.beginPath();
     ctx.rect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "black";
     ctx.fill();
     ctx.closePath();
   };
@@ -64,66 +59,79 @@ class Sort extends Component {
       this.drawBar(
         i,
         (array[i] / this.state.numBars) * canvas.height + canvas.height * 0.01,
-        "black"
+        "white"
       );
     }
   };
 
+  //need to break out sort and sort interval
   sort = () => {
-    this.checkIfSorted();
     const array = this.state.array.slice();
     let sortFunction = this.props.sortFunction;
-    let isSorted = this.state.isSorted;
-    setInterval(() => {
-      if (!isSorted) {
-        this.setState({ array: sortFunction(array) });
+    this.setState({ array: sortFunction(array) });
+  };
+
+  sortInterval = () => {
+    let sort = this.sort;
+    let interval = setInterval(() => {
+      sort();
+      if (this.checkIfSorted(this.state.array)) {
+        clearInterval(interval);
+        return;
       }
     }, 50);
   };
 
+  shuffle = () => {
+    const array = this.state.array.slice();
+    const shuffledArray = _.shuffle(array.slice());
+    this.setState({ array: shuffledArray });
+  };
+
   handleCanvasClicks = () => {
     const canvas = this.refs.canvas;
-    const sort = this.sort;
+    const sortInterval = this.sortInterval;
+    const shuffle = this.shuffle;
     canvas.addEventListener(
       "click",
-      function() {
-        sort();
+      () => {
+        if (this.checkIfSorted(this.state.array)) {
+          shuffle();
+        } else {
+          sortInterval();
+        }
       },
       false
     );
   };
 
-  checkIfSorted = () => {
+  checkIfSorted = array => {
     let arr = this.state.array.slice();
-    this.setState({ isSorted: true });
     for (let i = 0; i < arr.length - 1; i++) {
       if (arr[i] > arr[i + 1]) {
-        this.setState({ isSorted: false });
-        break;
+        return false;
       }
     }
+    return true;
   };
 
   componentDidMount() {
     this.initArrayState();
     this.drawBarsFromArray(this.state.array);
     this.handleCanvasClicks();
-    this.checkIfSorted();
   }
 
   componentDidUpdate() {
-    this.clearCanvasNow();
+    this.clearCanvas();
     this.drawBarsFromArray(this.state.array);
   }
 
   render() {
+    let height = window.height * 2; //TBD fix this
+
     return (
       <div className="sortWrapper">
-        <canvas
-          ref="canvas"
-          width={window.innerWidth * 0.8}
-          height={window.innerHeight * 0.5}
-        />
+        <canvas ref="canvas" width={window.innerWidth * 0.8} height={300} />
         <br />
         <div className="sortTitle">{this.props.sortName}</div>
         <div className="sortInfo">Info about {this.props.sortName}</div>
