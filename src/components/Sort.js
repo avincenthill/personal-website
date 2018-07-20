@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styles/main.css";
 import _ from "lodash";
+import Code from "react-code-prettify";
 
 //TBD add info about the sorts
 //TBD implement all sorts
@@ -126,11 +127,10 @@ class Sort extends Component {
   }
 
   render() {
-    let height = window.height * 2; //TBD fix this
-
     return (
       <div className="sortWrapper">
-        <canvas ref="canvas" width={window.innerWidth * 0.8} height={300} />
+        <canvas ref="canvas" width={window.innerWidth * 0.8} height={300} />{" "}
+        {/*TBD fix hardcoded height*/}
         <br />
         <div className="sortTitle">{this.props.sortName}</div>
         <div className="sortInfo">
@@ -141,6 +141,14 @@ class Sort extends Component {
           Average Case Time: {this.props.ACTC}
           <br />
           Worst Case Space: {this.props.WCSC}
+          <br />
+          <Code
+            className="code"
+            codeString={
+              this.props.sortFunctionName + " = " + this.props.sortFunctionText
+            }
+            language="javascript"
+          />
         </div>
         <br />
       </div>

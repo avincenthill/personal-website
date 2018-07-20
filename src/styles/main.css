@@ -291,12 +291,23 @@ div.sortWrapper {
 
 div.sortInfo {
   color: var(--color3);
-  font-size: 3vmin;
+  font-size: 3.75vmin;
+  margin: 2vmin;
 }
 
-/* TBD master dynamic css media queries */
+pre.prettyprint,
+code.prettyprint {
+  background-color: #000;
+  border-radius: 2vmin;
+  margin: 2vmin;
+  padding: 1vmin;
+  white-space: pre-wrap;
+  font-size: 2.75vmin;
+  text-align: left;
+}
+
 /* dynamic from https://stackoverflow.com/questions/18477016/switching-css-classes-based-on-screen-size */
-/* Desktops ----------- */
+/* Desktops and large screens ----------- */
 @media only screen and (min-width: 1243px) {
   /* nav styling */
   nav ul {
