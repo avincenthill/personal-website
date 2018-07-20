@@ -11,7 +11,8 @@ import Code from "react-code-prettify";
 class Sort extends Component {
   state = {
     array: [],
-    numBars: 25
+    numBars: 50,
+    i: 0
   };
 
   initArrayState = () => {
@@ -64,18 +65,23 @@ class Sort extends Component {
     }
   };
 
-  //need to understand how frames work here
+  //use state i to determine where algo should return to sorting after array is passed and animated
   sort = () => {
     const array = this.state.array.slice();
     let sortFunction = this.props.sortFunction;
-    this.setState({ array: sortFunction(array) });
+    let i = this.state.i;
+    this.setState({ array: sortFunction(array, i) });
   };
 
   sortInterval = () => {
     let sort = this.sort;
+
     let interval = setInterval(() => {
+      let i = this.state.i;
       sort();
+      this.setState({ i: i + 1 });
       if (this.checkIfSorted(this.state.array)) {
+        this.setState({ i: 0 });
         clearInterval(interval);
         return;
       }
@@ -97,6 +103,7 @@ class Sort extends Component {
       () => {
         if (this.checkIfSorted(this.state.array)) {
           shuffle();
+          this.setState({ i: 0 });
         } else {
           sortInterval();
         }
@@ -143,9 +150,7 @@ class Sort extends Component {
           <br />
           <Code
             className="code"
-            codeString={
-              this.props.sortFunctionName + " = " + this.props.sortFunctionText
-            }
+            codeString={this.props.sortFunctionText}
             language="javascript"
           />
         </div>

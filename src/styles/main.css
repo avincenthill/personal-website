@@ -306,8 +306,9 @@ code.prettyprint {
   border-radius: 2vmin;
   margin: 2vmin;
   padding: 1vmin;
+  padding-left: 0;
   white-space: pre-wrap;
-  font-size: 2.75vmin;
+  font-size: 2.2vmin;
   text-align: left;
   overflow: hidden;
   word-wrap: break-word;

@@ -27,13 +27,15 @@ class SortsWrapper extends Component {
     return array;
   };
 
-  insertionSort = array => {
-    for (let i = 1, j; i < array.length; i++) {
+  insertionSort = (array, i) => {
+    let j;
+    for (i + 1; i < array.length; i++) {
       var temp = array[i];
       for (j = i - 1; j >= 0 && array[j] > temp; j--) {
         array[j + 1] = array[j];
       }
       array[j + 1] = temp;
+      return array;
     }
     return array;
   };
@@ -50,7 +52,20 @@ class SortsWrapper extends Component {
           WCTC={"O(n^2)"}
           ACTC={"Θ(n^2)"}
           WCSC={"O(1)"}
-          sortFunctionText={this.insertionSort.toString()}
+          sortFunctionText={`
+          insertionSort = (array, i) => {
+            let j;
+            for (i + 1; i < array.length; i++) {
+              var temp = array[i];
+              for (j = i - 1; j >= 0 && array[j] > temp; j--) {
+                array[j + 1] = array[j];
+              }
+              array[j + 1] = temp;
+              return array;
+            }
+            return array;
+          };
+          `}
         />
         <Sort
           sortName="Bubble Sort"
@@ -60,7 +75,24 @@ class SortsWrapper extends Component {
           WCTC={"O(n^2)"}
           ACTC={"Θ(n^2)"}
           WCSC={"O(1)"}
-          sortFunctionText={this.bubbleSort.toString()}
+          sortFunctionText={`
+          bubbleSort = array => {
+            function swap(array, i, j) {
+              let temp = array[i];
+              array[i] = array[j];
+              array[j] = temp;
+            }
+            for (let i = 0; i < array.length; i++) {
+              for (let j = 1; j < array.length; j++) {
+                if (array[j - 1] > array[j]) {
+                  swap(array, j - 1, j);
+                  return array;
+                }
+              }
+            }
+            return array;
+          };
+          `}
         />
         <Sort
           sortName="Bogosort"
@@ -70,7 +102,11 @@ class SortsWrapper extends Component {
           WCTC={"O(∞)"}
           ACTC={"Θ((n+1)!)"}
           WCSC={"O(1)"}
-          sortFunctionText={this.bogoSort.toString()}
+          sortFunctionText={`
+          bogoSort = array => {
+            return _.shuffle(array);
+          };
+          `}
         />
       </React.Fragment>
     );
