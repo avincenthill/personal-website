@@ -12,12 +12,12 @@ class SortsWrapper extends Component {
 
   bubbleSort = array => {
     function swap(array, i, j) {
-      var temp = array[i];
+      let temp = array[i];
       array[i] = array[j];
       array[j] = temp;
     }
-    for (var i = 0; i < array.length; i++) {
-      for (var j = 1; j < array.length; j++) {
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 1; j < array.length; j++) {
         if (array[j - 1] > array[j]) {
           swap(array, j - 1, j);
           return array;
@@ -28,16 +28,14 @@ class SortsWrapper extends Component {
   };
 
   insertionSort = array => {
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 1, j; i < array.length; i++) {
       var temp = array[i];
-      var j = i - 1;
-      while (j >= 0 && array[j] > temp) {
+      for (j = i - 1; j >= 0 && array[j] > temp; j--) {
         array[j + 1] = array[j];
-        j--;
       }
       array[j + 1] = temp;
-      return array;
     }
+    return array;
   };
 
   render() {
@@ -45,13 +43,13 @@ class SortsWrapper extends Component {
       <React.Fragment>
         <br />
         <Sort
-          sortName="Insertion Sort - TBD"
+          sortName="Insertion Sort"
           sortFunction={this.insertionSort}
           sortFunctionName="insertionSort"
-          description="TBD"
-          WCTC={"TBD"}
-          ACTC={"TBD"}
-          WCSC={"TBD"}
+          description="insert each item into a growing sorted list"
+          WCTC={"O(n^2)"}
+          ACTC={"Θ(n^2)"}
+          WCSC={"O(1)"}
           sortFunctionText={this.insertionSort.toString()}
         />
         <Sort

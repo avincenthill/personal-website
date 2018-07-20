@@ -64,7 +64,7 @@ class Sort extends Component {
     }
   };
 
-  //need to break out sort and sort interval
+  //need to understand how frames work here
   sort = () => {
     const array = this.state.array.slice();
     let sortFunction = this.props.sortFunction;
@@ -131,16 +131,15 @@ class Sort extends Component {
       <div className="sortWrapper">
         <canvas ref="canvas" width={window.innerWidth * 0.8} height={300} />{" "}
         {/*TBD fix hardcoded height*/}
-        <br />
         <div className="sortTitle">{this.props.sortName}</div>
+        <div className="sortInfoDescription">{this.props.description}</div>
         <div className="sortInfo">
-          {this.props.description}
           <br />
-          Worst Case Time: {this.props.WCTC}
+          Worst Case Time: <b>{this.props.WCTC}</b>
           <br />
-          Average Case Time: {this.props.ACTC}
+          Average Case Time: <b>{this.props.ACTC}</b>
           <br />
-          Worst Case Space: {this.props.WCSC}
+          Worst Case Space: <b>{this.props.WCSC}</b>
           <br />
           <Code
             className="code"
