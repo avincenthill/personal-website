@@ -5,6 +5,9 @@ import "../styles/main.css";
 import Sort from "./Sort";
 import _ from "lodash";
 
+//TBD fix project pic
+//TBD fix desktop height hardcoded
+
 class SortsWrapper extends Component {
   bogoSort = array => {
     return _.shuffle(array);
@@ -61,7 +64,6 @@ class SortsWrapper extends Component {
                 array[j + 1] = array[j];
               }
               array[j + 1] = temp;
-              return array;
             }
             return array;
           };
@@ -86,7 +88,6 @@ class SortsWrapper extends Component {
               for (let j = 1; j < array.length; j++) {
                 if (array[j - 1] > array[j]) {
                   swap(array, j - 1, j);
-                  return array;
                 }
               }
             }

@@ -11,6 +11,9 @@ import NSAShirt from "../img/NSA.png";
 import PPPLogo from "../img/Picture-Perfect-Petals-Logo_500x500.png";
 import Sorting from "../img/sorting.jpg";
 
+//TBD project icons
+//TBD Google maps API countries I've been to
+
 class ProjectsWrapper extends Component {
   render() {
     return (
