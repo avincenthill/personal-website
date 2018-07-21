@@ -9,7 +9,7 @@ import ParticleSimulation from "../img/particles.png";
 import HilbertShirt from "../img/Hilbert.png";
 import NSAShirt from "../img/NSA.png";
 import PPPLogo from "../img/Picture-Perfect-Petals-Logo_500x500.png";
-import Sorting from "../img/sorting.jpg";
+import Sorting from "../img/sorting.png";
 
 //TBD project icons
 //TBD Google maps API countries I've been to
