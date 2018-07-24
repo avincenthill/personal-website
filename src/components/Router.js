@@ -7,6 +7,7 @@ import ProjectsWrapper from "./ProjectsWrapper";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import SortsWrapper from "./SortsWrapper";
+import Places from "./places";
 
 const Router = () => (
   <BrowserRouter>
@@ -16,7 +17,10 @@ const Router = () => (
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/sorting" component={SortsWrapper} />
+        <Route exact path="/places" component={Places} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/index" component={About} />
+        <Route exact path="/index.html" component={About} />
         <Route exact path="/" component={About} />
         <Route component={NotFound} />
       </Switch>
@@ -25,7 +29,3 @@ const Router = () => (
 );
 
 export default Router;
-
-/*
-<Route component={NotFound} />
-*/
