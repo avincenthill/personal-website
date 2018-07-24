@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import "../styles/main.css";
 import Emoji from "react-emoji-render";
-import IconAmazonwebservices from "react-devicon/amazonwebservices/original";
 
 class About extends Component {
   render() {

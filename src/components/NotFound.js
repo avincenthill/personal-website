@@ -7,7 +7,8 @@ class NotFound extends Component {
     return (
       <React.Fragment>
         <br />
-        <div>404 Not Found</div>
+        <div>404: Not Found</div>
+        <br />
         <br />
         <div className="logo404 btn">
           <Logo />
