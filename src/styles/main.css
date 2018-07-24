@@ -264,6 +264,7 @@ div.blurb {
   text-align: left;
   padding-left: 5vmin;
   padding-right: 5vmin;
+  align-items: center;
 }
 
 div.headshot {
@@ -277,6 +278,27 @@ img.headshot {
   max-width: 60vw;
   max-height: 60vw;
   margin: auto;
+}
+
+div.aboutDeviconContainer {
+  /* flexbox container */
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-bottom: 3vmin;
+  align-items: center;
+  width: 100%;
+}
+
+svg.aboutDevicon {
+  /* flexbox item */
+  width: 5vh;
+  height: 5vh;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 3vmin;
+  fill: white;
 }
 
 /* sorting styling */
