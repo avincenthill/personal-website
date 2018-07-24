@@ -314,6 +314,11 @@ code.prettyprint {
   word-wrap: break-word;
 }
 
+/* map styling */
+div.mapTitle {
+  padding: 1vmin;
+}
+
 /* dynamic from https://stackoverflow.com/questions/18477016/switching-css-classes-based-on-screen-size */
 /* Desktops and large screens ----------- */
 @media only screen and (min-width: 1243px) {

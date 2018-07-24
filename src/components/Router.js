@@ -7,7 +7,7 @@ import ProjectsWrapper from "./ProjectsWrapper";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import SortsWrapper from "./SortsWrapper";
-import Places from "./places";
+import Places from "./Places";
 
 const Router = () => (
   <BrowserRouter>
