@@ -10,6 +10,7 @@ import HilbertShirt from "../img/Hilbert.png";
 import NSAShirt from "../img/NSA.png";
 import PPPLogo from "../img/Picture-Perfect-Petals-Logo_500x500.png";
 import Sorting from "../img/sorting.png";
+import Maps from "../img/maps.jpg";
 
 //TBD project icons
 //TBD Google maps API countries I've been to
@@ -19,6 +20,12 @@ class ProjectsWrapper extends Component {
     return (
       <React.Fragment>
         <div className="projectWrapper">
+          <Project
+            projectName="Places I've Been"
+            projectLink="/places"
+            projectImg={Maps}
+            projectDescription="Countries I've been to"
+          />
           <Project
             projectName="Sorting Algorithms"
             projectLink="/sorting"
