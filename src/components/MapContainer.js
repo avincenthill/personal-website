@@ -33,6 +33,165 @@ const Map = withScriptjs(
             lng: -106.346771
           }}
         />
+
+        {/* Mexico */}
+        <Marker
+          position={{
+            lat: 23.634501,
+            lng: -102.552784
+          }}
+        />
+
+        {/* Peru */}
+        <Marker
+          position={{
+            lat: -9.189966999999999,
+            lng: -75.015152
+          }}
+        />
+
+        {/* Morocco */}
+        <Marker
+          position={{
+            lat: 31.791702,
+            lng: -7.092619999999999
+          }}
+        />
+
+        {/* South Korea */}
+        <Marker
+          position={{
+            lat: 35.907757,
+            lng: 127.766922
+          }}
+        />
+
+        {/* North Korea */}
+        <Marker
+          position={{
+            lat: 40.339852,
+            lng: 127.510093
+          }}
+        />
+
+        {/* Ireland */}
+        <Marker
+          position={{
+            lat: 53.1423672,
+            lng: -7.692053599999999
+          }}
+        />
+
+        {/* United Kingdom */}
+        <Marker
+          position={{
+            lat: 55.378051,
+            lng: -3.435973
+          }}
+        />
+
+        {/* Portugal */}
+        <Marker
+          position={{
+            lat: 39.39987199999999,
+            lng: -8.224454
+          }}
+        />
+
+        {/* Spain */}
+        <Marker
+          position={{
+            lat: 40.46366700000001,
+            lng: -3.74922
+          }}
+        />
+
+        {/* The Netherlands */}
+        <Marker
+          position={{
+            lat: 52.132633,
+            lng: 5.291265999999999
+          }}
+        />
+
+        {/* Germany */}
+        <Marker
+          position={{
+            lat: 51.165691,
+            lng: 10.451526
+          }}
+        />
+
+        {/* Denmark */}
+        <Marker
+          position={{
+            lat: 56.26392,
+            lng: 9.501785
+          }}
+        />
+
+        {/* Austria */}
+        <Marker
+          position={{
+            lat: 47.516231,
+            lng: 14.550072
+          }}
+        />
+
+        {/* Czech Republic */}
+        <Marker
+          position={{
+            lat: 49.81749199999999,
+            lng: 15.472962
+          }}
+        />
+
+        {/* Slovakia */}
+        <Marker
+          position={{
+            lat: 48.669026,
+            lng: 19.699024
+          }}
+        />
+
+        {/* Hungary */}
+        <Marker
+          position={{
+            lat: 47.162494,
+            lng: 19.5033041
+          }}
+        />
+
+        {/* Italy */}
+        <Marker
+          position={{
+            lat: 41.87194,
+            lng: 12.56738
+          }}
+        />
+
+        {/* Greece */}
+        <Marker
+          position={{
+            lat: 39.074208,
+            lng: 21.824312
+          }}
+        />
+
+        {/* Vatican City */}
+        <Marker
+          position={{
+            lat: 41.902916,
+            lng: 12.453389
+          }}
+        />
+        {/* San Marino */}
+        <Marker
+          position={{
+            lat: 43.94236,
+            lng: 12.457777
+          }}
+        />
       </div>
     </GoogleMap>
   ))
