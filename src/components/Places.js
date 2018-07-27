@@ -7,7 +7,7 @@ class Places extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="mapTitle">Places I've been to</div>
+        <div className="mapTitle">Countries I've been to:</div>
         <MapContainer />
       </React.Fragment>
     );
