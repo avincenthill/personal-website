@@ -4,6 +4,7 @@ import "../styles/main.css";
 //import _ from 'underscore'
 import Nav from "./Nav";
 import Footer from "./Footer";
+require("dotenv").config();
 
 class App extends Component {
   render() {
