@@ -48,15 +48,13 @@ class Contact extends Component {
               </a>
             </div>
             <div className="contactItem btn">
-              <a
-                href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
-              >
+              <a href={require("../pdf/avh_resume.pdf")}>
                 <Ionicon icon="ios-document" fontSize="2.25em" color="white" />
               </a>
               <br />
               <a
-                href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
-                download="Alexander J. Vincent-Hill - Resume.pdf"
+                href={require("../pdf/avh_resume.pdf")}
+                download="avh_resume.pdf"
               >
                 Alexander J. Vincent-Hill - Resume.pdf
               </a>

@@ -42,6 +42,7 @@
     "react-devicon": "^0.1.9",
     "react-dom": "^16.4.1",
     "react-emoji-render": "^0.4.4",
+    "react-google-maps": "^9.4.5",
     "react-ionicons": "^2.1.6",
     "react-pdf": "^3.0.5",
     "react-router-dom": "^4.3.1",

@@ -3,16 +3,13 @@ import React, { Component } from "react";
 import { Document, Page } from "react-pdf";
 import "../styles/main.css";
 import $ from "jquery";
-import resume from "../pdf/Alexander J. Vincent-Hill - Resume.pdf";
+import resume from "../pdf/avh_resume.pdf";
 
 class Resume extends Component {
   render() {
     return (
       <React.Fragment>
-        <a
-          href={require("../pdf/Alexander J. Vincent-Hill - Resume.pdf")}
-          download="Alexander J. Vincent-Hill - Resume.pdf"
-        >
+        <a href={require("../pdf/avh_resume.pdf")} download="avh_resume.pdf">
           Download resume!
         </a>
         <Document
