@@ -38,7 +38,7 @@
     "raf": "3.4.0",
     "react": "^16.4.1",
     "react-code-prettify": "0.0.1",
-    "react-dev-utils": "^5.0.3",
+    "react-dev-utils": "^11.0.4",
     "react-devicon": "^0.1.9",
     "react-dom": "^16.13.0",
     "react-emoji-render": "^0.4.4",
